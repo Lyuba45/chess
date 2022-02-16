@@ -17,11 +17,7 @@ public class Horse extends ChessPiece {
             return false;
         } else if (toLine < 0 || toLine > 7 || toColumn < 0 || toColumn > 7) {
             return false;
-        } else if (!(lstep == 2 && cstep == 1) && !(lstep == 1 && cstep == 2)) {
-            return false;
-        } else {
-            return true;
-        }
+        } else return lstep == 2 && cstep == 1 || lstep == 1 && cstep == 2;
     }
 
     @Override
